@@ -1,11 +1,54 @@
-<script>
-  export let name
-</script>
-
-<h1>Hello, {name}!</h1>
+<div class="c-layout">
+  <div class="c-layout__content">
+    <div class="c-section__container">
+      <div class="c-section">
+        <input
+          type="text"
+          placeholder="WYSIWYG Editor"
+          class="t-text c-text__headline c-input__m-transparent"
+        />
+      </div>
+      <div class="c-section"><Editor></Editor></div>
+    </div>
+  </div>
+</div>
 
 <style>
-  h1 {
-    color: purple;
+  .c-layout {
+    padding: 80px 0;
+    width: 100%;
+  }
+
+  .c-layout__content {
+    margin: 0 auto;
+    height: 100%;
+    width: 800px;
+  }
+
+  .c-section__container {
+    margin-top: -10px;
+  }
+
+  .c-section {
+    margin-top: 10px;
+  }
+
+  .c-text {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .c-text__headline {
+    font-size: 3em;
+    font-weight: 700;
+  }
+
+  .c-input__m-transparent {
+    padding: 0;
+    border: none;
+    outline: none;
   }
 </style>
+
+<script>
+  import Editor from './Editor.html'
+</script>
